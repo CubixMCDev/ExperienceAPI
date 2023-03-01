@@ -30,8 +30,8 @@ public class ExpCmd extends Command{
 		ProxiedPlayer p = (ProxiedPlayer) sender;
 		
 		if(args.length == 0) {
-			sendMessage(p, PREFIX + "§eVous disposez d'actuellement §6" + expM.getExp(p.getUniqueId()) + " §ed'expérience.");
-			sendMessage(p, PREFIX + "§eVous êtes au niveau §6" + expM.getLevel(p.getUniqueId()) + ". §eIl vous manque §6" + (expM.getXPfromLevel(expM.getLevel(p.getUniqueId()) + 1) - expM.getExp(p.getUniqueId())) + " §ed'expériences pour passer au niveau §6" + (expM.getLevel(p.getUniqueId()) + 1));
+			sendMessage(p, PREFIX + "Â§eVous disposez d'actuellement Â§6" + expM.getExp(p.getUniqueId()) + " Â§ed'expÃ©rience.");
+			sendMessage(p, PREFIX + "Â§eVous Ãªtes au niveau Â§6" + expM.getLevel(p.getUniqueId()) + ". Â§eIl vous manque Â§6" + (expM.getXPfromLevel(expM.getLevel(p.getUniqueId()) + 1) - expM.getExp(p.getUniqueId())) + " Â§ed'expÃ©riences pour passer au niveau Â§6" + (expM.getLevel(p.getUniqueId()) + 1));
 			return;
 		}
 		
@@ -44,20 +44,20 @@ public class ExpCmd extends Command{
 				ProxiedPlayer target = ProxyServer.getInstance().getPlayer(args[1]);
 				
 				if(target == null) {
-					sendMessage(p, PREFIX + "§cLe joueur n'existe pas ou est hors ligne !");
+					sendMessage(p, PREFIX + "Â§cLe joueur n'existe pas ou est hors ligne !");
 					return;
 				}
 				
 				int amount = Integer.valueOf(args[2]);
 				expM.addExp(amount, target.getUniqueId());
-				sendMessage(p, PREFIX + "§7Vous venez d'ajouter §6" + amount + " d'expériences à §e" + target.getName());
-				sendMessage(p, PREFIX + "§7Vous passer au niveau §d" + expM.getLevel(p.getUniqueId()));
+				sendMessage(p, PREFIX + "Â§7Vous venez d'ajouter Â§6" + amount + " d'expÃ©riences Ã  Â§e" + target.getName());
+				sendMessage(p, PREFIX + "Â§7Vous passer au niveau Â§d" + expM.getLevel(p.getUniqueId()));
 			}
 			if(args[0].equalsIgnoreCase("setlevel")) {
 				ProxiedPlayer target = ProxyServer.getInstance().getPlayer(args[1]);
 				
 				if(target == null) {
-					sendMessage(p, PREFIX + "§cLe joueur n'existe pas ou est hors ligne !");
+					sendMessage(p, PREFIX + "Â§cLe joueur n'existe pas ou est hors ligne !");
 					return;
 				}
 				

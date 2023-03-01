@@ -16,7 +16,7 @@ public class Main extends Plugin{
 	public void onEnable() {
 		getProxy().getPluginManager().registerCommand(this, new ExpCmd(this));
 		getProxy().getPluginManager().registerListener(this, new PlayerListener(this));
-		database = new SQLConnection(this, "jdbc:mysql://", "localhost", "cubixbase", "Cubix", "CubixTMPlanet2019");
+		database = new SQLConnection(this, "jdbc:mysql://", "localhost", "cubixbase", "user", "password");
 		database.connection();
 	}
 	

@@ -14,14 +14,14 @@ public class PlayerDataManager {
 		if(!main.getDataPlayers().containsKey(p)){
 			PlayerData playerData = main.getSql().createPlayerData(p);
 			main.getDataPlayers().put(p, playerData);
-			System.out.println("Experience API : Donnees du joueur " + p.getName() + " chargees avec succès.");
+			System.out.println("Experience API : Donnees du joueur " + p.getName() + " chargees avec succÃ©s.");
 		}
 	}
 	
 	public void savePlayerData(ProxiedPlayer p){
 		if(main.getDataPlayers().containsKey(p)){
 			main.getSql().updatePlayerData(p);
-			System.out.println("Experience API : Donnees du joueur " + p.getName() + " sauvegardees avec succès.");	
+			System.out.println("Experience API : Donnees du joueur " + p.getName() + " sauvegardees avec succÃ©s.");
 		}
 	}
 
